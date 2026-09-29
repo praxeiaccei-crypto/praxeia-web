@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PRAXEIA Consultora y Centro de Estudios e Investigaciones Pedagógicas</title>
   
-  <!-- FAVICON: Fondo Crema (#FDFBF7) con letra 'P' en Georgia en color gris (#1e2530) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FDFBF7'/><text x='50%' y='72%' font-family='Georgia, serif' font-size='70' font-weight='bold' fill='%231e2530' text-anchor='middle'>P</text></svg>">
+  <!-- FAVICON: Fondo Gris Hielo (#E2E8F0) con letra 'P' en Georgia en color gris oscuro (#1e2530) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23E2E8F0'/><text x='50%' y='72%' font-family='Georgia, serif' font-size='70' font-weight='bold' fill='%231e2530' text-anchor='middle'>P</text></svg>">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -16,11 +16,13 @@
       theme: {
         extend: {
           colors: {
-            bgDark: '#1e2530',      /* Gris de fondo más claro */
-            cardDark: '#283141',    /* Tarjetas en gris intermedio */
-            borderDark: '#3b4759',  /* Bordes */
-            praxeiaGold: '#d4af37',
-            praxeiaCream: '#FDFBF7',/* Fondo Crema */
+            bgDark: '#1e2530',        /* Gris Oscuro Principal */
+            cardDark: '#283141',      /* Gris Oscuro Secundario */
+            borderDark: '#3b4759',    /* Bordes */
+            iceGray: '#E2E8F0',       /* Gris Hielo para Textos */
+            aeroBlue: '#38bdf8',      /* Celeste Aero para Botones */
+            aeroBlueHover: '#0284c7', /* Celeste Aero Hover */
+            praxeiaTurquoise: '#2dd4bf', /* Turquesa para Resaltados */
             mpBlue: '#009ee3',
             mpBlueHover: '#008ac7'
           },
@@ -35,37 +37,81 @@
   <style>
     body {
       font-family: Georgia, serif;
+      background-color: #1e2530;
+      color: #E2E8F0;
     }
   </style>
 </head>
-<body class="bg-bgDark text-gray-200 antialiased selection:bg-praxeiaGold selection:text-black">
+<body class="bg-bgDark text-iceGray antialiased selection:bg-praxeiaTurquoise selection:text-black">
 
   <!-- NAVEGACIÓN -->
   <nav class="fixed top-0 left-0 w-full z-40 bg-bgDark/95 backdrop-blur-md border-b border-borderDark">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+      
+      <!-- LOGO Y TÍTULO EN 4 LÍNEAS -->
       <div class="flex items-center gap-3">
-        <!-- Ícono del Logo con la P -->
-        <div class="w-10 h-10 rounded-xl bg-praxeiaCream flex items-center justify-center text-bgDark font-bold text-2xl shadow-md">
+        <div class="w-12 h-12 rounded-xl bg-iceGray flex items-center justify-center text-bgDark font-bold text-2xl shadow-md">
           P
         </div>
-       <div>
-          <span class="text-xl tracking-wider text-white font-bold block leading-none mb-1">PRAXEIA</span>
-          <span class="text-[10px] text-praxeiaGold font-bold tracking-widest uppercase block">Consultora</span>
-          <span class="text-[9px] text-gray-300 tracking-widest uppercase block -mt-0.5">y Centro de Estudios</span>
-          <span class="text-[9px] text-gray-300 tracking-widest uppercase block -mt-0.5">e Investigaciones Pedagógicas</span>
+        <div>
+          <span class="text-2xl tracking-wider text-iceGray font-bold block leading-none mb-1">PRAXEIA</span>
+          <span class="text-[10px] text-gray-300 tracking-widest uppercase block leading-tight">Consultora</span>
+          <span class="text-[9px] text-gray-300 tracking-widest uppercase block leading-tight">y Centro de Estudios</span>
+          <span class="text-[9px] text-gray-300 tracking-widest uppercase block leading-tight">e Investigaciones Pedagógicas</span>
+        </div>
+      </div>
+
+      <!-- MENÚ PRINCIPAL -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-iceGray">
+        <a href="#inicio" class="hover:text-praxeiaTurquoise transition-colors">Inicio</a>
+        <a href="#convocatorias" class="hover:text-praxeiaTurquoise transition-colors">Convocatorias</a>
+        <a href="#publicaciones" class="hover:text-praxeiaTurquoise transition-colors">Publicaciones</a>
+        
+        <!-- DESPLEGABLE: PRODUCTOS Y SERVICIOS -->
+        <div class="relative group">
+          <button class="flex items-center gap-1.5 hover:text-praxeiaTurquoise transition-colors py-2">
+            <span>Productos y Servicios</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div class="absolute top-full left-0 hidden group-hover:block w-56 bg-cardDark border border-borderDark rounded-xl shadow-2xl p-2 space-y-1">
+            <a href="#oferta-academica" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+              <i class="fa-solid fa-graduation-cap mr-2 text-praxeiaTurquoise"></i>Oferta Académica
+            </a>
+            <a href="#kits" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+              <i class="fa-solid fa-boxes-packing mr-2 text-praxeiaTurquoise"></i>Kits y Recursos
+            </a>
+          </div>
         </div>
 
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
-        <a href="#convocatorias" class="hover:text-praxeiaGold transition-colors">Convocatorias</a>
-        <a href="#anuarios" class="hover:text-praxeiaGold transition-colors">Anuarios</a>
-        <a href="#oferta-academica" class="hover:text-praxeiaGold transition-colors">Oferta Académica</a>
-        <a href="#kits" class="hover:text-praxeiaGold transition-colors">Kits & Recursos</a>
-        <a href="#suscripcion" class="hover:text-praxeiaGold transition-colors">Suscripción Gratuita</a>
+        <!-- DESPLEGABLE: COMUNIDAD PRAXEIA -->
+        <div class="relative group">
+          <button class="flex items-center gap-1.5 hover:text-praxeiaTurquoise transition-colors py-2">
+            <span>Comunidad Praxeia</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div class="absolute top-full right-0 hidden group-hover:block w-60 bg-cardDark border border-borderDark rounded-xl shadow-2xl p-2 space-y-1">
+            <a href="https://wa.me/5490000000000" target="_blank" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+              <i class="fa-brands fa-whatsapp mr-2 text-praxeiaTurquoise"></i>Contactar por WhatsApp
+            </a>
+            <a href="#redes" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+              <i class="fa-solid fa-share-nodes mr-2 text-praxeiaTurquoise"></i>Redes Sociales
+            </a>
+            <a href="#colabora" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+              <i class="fa-solid fa-hand-holding-heart mr-2 text-praxeiaTurquoise"></i>Colaborar
+            </a>
+            <a href="#suscripcion" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+              <i class="fa-solid fa-envelope-open-text mr-2 text-praxeiaTurquoise"></i>Suscripción Gratuita
+            </a>
+            <a href="#unirse" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+              <i class="fa-solid fa-users mr-2 text-praxeiaTurquoise"></i>Unirse al Proyecto
+            </a>
+          </div>
+        </div>
       </div>
 
       <div class="flex items-center gap-3">
         <!-- BOTÓN ACCESO A CAMPUS VIRTUAL -->
-        <a href="https://campus.praxeia.com.ar" target="_blank" class="px-4 py-2 rounded-xl bg-cardDark border border-praxeiaGold/50 text-praxeiaGold hover:bg-praxeiaGold hover:text-bgDark transition-all duration-300 font-medium text-xs sm:text-sm flex items-center gap-2">
+        <a href="https://campus.praxeia.com.ar" target="_blank" class="px-4 py-2 rounded-xl bg-aeroBlue text-bgDark hover:bg-aeroBlueHover hover:text-white transition-all duration-300 font-bold text-xs sm:text-sm flex items-center gap-2 shadow-md">
           <i class="fa-solid fa-graduation-cap"></i>
           <span>Campus Virtual</span>
         </a>
@@ -73,66 +119,55 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="pt-36 pb-20 md:pt-48 md:pb-28 relative overflow-hidden">
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-praxeiaGold/10 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- HERO SECTION / INICIO -->
+  <section id="inicio" class="pt-40 pb-20 md:pt-48 md:pb-28 relative overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-praxeiaTurquoise/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cardDark border border-borderDark text-praxeiaGold text-xs font-semibold uppercase tracking-widest mb-8">
-        <span class="w-2 h-2 rounded-full bg-praxeiaGold animate-pulse"></span>
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cardDark border border-borderDark text-praxeiaTurquoise text-xs font-semibold uppercase tracking-widest mb-8">
+        <span class="w-2 h-2 rounded-full bg-praxeiaTurquoise animate-pulse"></span>
         Deán Funes, Córdoba · Argentina
       </div>
       
-      <!-- SLOGAN EN UNA SOLA LÍNEA CON COLOR CREMA -->
-      <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-praxeiaCream tracking-tight leading-tight mb-8 whitespace-nowrap overflow-x-auto">
+      <!-- SLOGAN -->
+      <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-iceGray tracking-tight leading-tight mb-8 whitespace-nowrap overflow-x-auto">
         El oficio de formar para transformar.
       </h1>
 
-      <!-- BAJADA EN CURSIVA -->
+      <!-- BAJADA -->
       <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-normal italic leading-relaxed mb-10">
         Un espacio de investigación, formación e intervención dedicado a resignificar distintas áreas institucionales y organizacionales.
       </p>
 
-      <!-- BOTONES DE ACCIÓN PRINCIPALES -->
+      <!-- BOTONES EN COLOR AERO -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <!-- LINK DIRECTO AL GOOGLE FORM -->
-        <a href="https://docs.google.com/forms/d/14MPe1himlv_yDPPYBjrCQizFZGpJDdRrnEa7CRrzUM0/edit" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-praxeiaGold to-amber-500 text-bgDark font-bold shadow-lg shadow-praxeiaGold/20 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3">
+        <a href="https://docs.google.com/forms/d/14MPe1himlv_yDPPYBjrCQizFZGpJDdRrnEa7CRrzUM0/edit" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-aeroBlue text-bgDark font-bold shadow-lg shadow-aeroBlue/20 hover:bg-aeroBlueHover hover:text-white transition-all duration-300 flex items-center justify-center gap-3">
           <i class="fa-solid fa-file-pen"></i>
           <span>Convocatoria Número Inaugural</span>
         </a>
         
-        <a href="#suscripcion" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-cardDark border border-borderDark text-white hover:bg-borderDark transition-all duration-300 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-envelope-open-text text-praxeiaGold"></i>
-          <span>Suscripción Gratuita</span>
-        </a>
-
-        <a href="#colabora" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-cardDark border border-borderDark text-white hover:bg-borderDark transition-all duration-300 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-hand-holding-heart text-praxeiaGold"></i>
-          <span>Colaborá</span>
-        </a>
-
-        <a href="#forma-parte" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-cardDark border border-borderDark text-white hover:bg-borderDark transition-all duration-300 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-users text-praxeiaGold"></i>
-          <span>Formá parte del proyecto</span>
+        <a href="#suscripcion" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-cardDark border border-borderDark text-iceGray hover:bg-borderDark transition-all duration-300 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-envelope-open-text text-praxeiaTurquoise"></i>
+          <span>Comunidad Praxeia</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓN ANUARIOS & PUBLICACIONES -->
-  <section id="anuarios" class="py-20 bg-cardDark/40 border-y border-borderDark">
+  <!-- SECCIÓN PUBLICACIONES -->
+  <section id="publicaciones" class="py-20 bg-cardDark/40 border-y border-borderDark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="px-3 py-1 bg-praxeiaGold/10 text-praxeiaGold rounded-md text-xs font-semibold uppercase tracking-wider mb-3 inline-block">Publicaciones</span>
-        <h2 class="text-3xl font-bold text-white mb-4">Anuarios</h2>
+        <span class="px-3 py-1 bg-praxeiaTurquoise/10 text-praxeiaTurquoise rounded-md text-xs font-semibold uppercase tracking-wider mb-3 inline-block">Investigación & Contenido</span>
+        <h2 class="text-3xl font-bold text-iceGray mb-4">Publicaciones</h2>
         <p class="text-gray-300 text-sm">Espacio donde se encuentran recopiladas las publicaciones, investigaciones e intervenciones pedagógicas institucionales.</p>
       </div>
       
       <div class="bg-bgDark p-8 rounded-2xl border border-borderDark text-center max-w-2xl mx-auto">
-        <i class="fa-solid fa-book-bookmark text-4xl text-praxeiaGold mb-4"></i>
-        <h3 class="text-xl font-bold text-white mb-2">Edición 2026 - En Proceso de Convocatoria</h3>
+        <i class="fa-solid fa-book-bookmark text-4xl text-praxeiaTurquoise mb-4"></i>
+        <h3 class="text-xl font-bold text-iceGray mb-2">Edición 2026 - En Proceso de Convocatoria</h3>
         <p class="text-sm text-gray-400 mb-6">Las publicaciones del Número Inaugural estarán disponibles tras finalizar el proceso de recepción y evaluación.</p>
-        <a href="https://docs.google.com/forms/d/14MPe1himlv_yDPPYBjrCQizFZGpJDdRrnEa7CRrzUM0/edit" target="_blank" class="inline-flex items-center gap-2 text-praxeiaGold hover:underline text-sm font-semibold">
+        <a href="https://docs.google.com/forms/d/14MPe1himlv_yDPPYBjrCQizFZGpJDdRrnEa7CRrzUM0/edit" target="_blank" class="inline-flex items-center gap-2 text-praxeiaTurquoise hover:underline text-sm font-semibold">
           <span>Participar de la convocatoria actual</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
@@ -140,20 +175,20 @@
     </div>
   </section>
 
-  <!-- SECCIÓN OFERTA ACADÉMICA -->
+  <!-- SECCIÓN PRODUCTOS Y SERVICIOS: OFERTA ACADÉMICA -->
   <section id="oferta-academica" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="px-3 py-1 bg-praxeiaGold/10 text-praxeiaGold rounded-md text-xs font-semibold uppercase tracking-wider mb-3 inline-block">Formación Continuada</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Oferta Académica</h2>
+      <span class="px-3 py-1 bg-praxeiaTurquoise/10 text-praxeiaTurquoise rounded-md text-xs font-semibold uppercase tracking-wider mb-3 inline-block">Formación Continuada</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-iceGray mb-4">Oferta Académica</h2>
       <p class="text-gray-300 text-sm">Diplomados, trayectos formativos y programas de actualización profesional en gestión e intervención pedagógica.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="bg-cardDark p-8 rounded-2xl border border-borderDark">
-        <span class="text-xs text-praxeiaGold uppercase font-semibold">Diplomado</span>
-        <h3 class="text-2xl font-bold text-white mt-1 mb-4">Organización y Administración Pedagógica</h3>
+        <span class="text-xs text-praxeiaTurquoise uppercase font-semibold">Diplomado</span>
+        <h3 class="text-2xl font-bold text-iceGray mt-1 mb-4">Organización y Administración Pedagógica</h3>
         <p class="text-gray-300 text-sm leading-relaxed mb-6">Un espacio sistemático para tensionar la norma escrita con la contingencia cotidiana, abordando la responsabilidad civil, el uso ético de IA y el resguardo de derechos.</p>
-        <a href="https://campus.praxeia.com.ar" target="_blank" class="inline-flex items-center gap-2 text-praxeiaGold hover:underline text-sm font-semibold">
+        <a href="https://campus.praxeia.com.ar" target="_blank" class="inline-flex items-center gap-2 text-praxeiaTurquoise hover:underline text-sm font-semibold">
           <span>Ver Programa en Campus Virtual</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
@@ -161,27 +196,27 @@
     </div>
   </section>
 
-  <!-- SECCIÓN KITS Y RECURSOS -->
+  <!-- SECCIÓN PRODUCTOS Y SERVICIOS: KITS Y RECURSOS -->
   <section id="kits" class="py-20 bg-cardDark/40 border-y border-borderDark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="px-3 py-1 bg-praxeiaGold/10 text-praxeiaGold rounded-md text-xs font-semibold uppercase tracking-wider mb-3 inline-block">Herramientas de Gestión</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Kits de Recursos e Instrumental Institucional</h2>
+        <span class="px-3 py-1 bg-praxeiaTurquoise/10 text-praxeiaTurquoise rounded-md text-xs font-semibold uppercase tracking-wider mb-3 inline-block">Herramientas de Gestión</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-iceGray mb-4">Kits de Recursos e Instrumental Institucional</h2>
         <p class="text-gray-300 text-sm">Herramientas, plantillas editables y matrices de gestión listas para su implementación en las instituciones.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <div class="bg-bgDark p-6 rounded-2xl border border-borderDark flex flex-col justify-between hover:border-praxeiaGold/50 transition-colors">
+        <div class="bg-bgDark p-6 rounded-2xl border border-borderDark flex flex-col justify-between hover:border-praxeiaTurquoise/50 transition-colors">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-praxeiaGold/10 text-praxeiaGold flex items-center justify-center text-xl mb-4">
+            <div class="w-12 h-12 rounded-xl bg-praxeiaTurquoise/10 text-praxeiaTurquoise flex items-center justify-center text-xl mb-4">
               <i class="fa-solid fa-folder-open"></i>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Kit de Redacción y Actos de Gobierno</h3>
+            <h3 class="text-xl font-bold text-iceGray mb-2">Kit de Redacción y Actos de Gobierno</h3>
             <p class="text-xs text-gray-300 mb-6 leading-relaxed">Plantillas editables de Disposiciones Internas, Actas Complejas, Notificaciones y Memorándums adaptados a normas jurisdiccionales.</p>
           </div>
           <div>
-            <div class="text-2xl font-bold text-white mb-4">$15.000 <span class="text-xs font-normal text-gray-400">ARS</span></div>
+            <div class="text-2xl font-bold text-iceGray mb-4">$15.000 <span class="text-xs font-normal text-gray-400">ARS</span></div>
             <a href="https://mpago.la/TU_LINK_AQUI" target="_blank" class="w-full py-3 rounded-xl bg-mpBlue hover:bg-mpBlueHover text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
               <i class="fa-solid fa-credit-card"></i>
               <span>Comprar con Mercado Pago</span>
@@ -189,16 +224,16 @@
           </div>
         </div>
 
-        <div class="bg-bgDark p-6 rounded-2xl border border-borderDark flex flex-col justify-between hover:border-praxeiaGold/50 transition-colors">
+        <div class="bg-bgDark p-6 rounded-2xl border border-borderDark flex flex-col justify-between hover:border-praxeiaTurquoise/50 transition-colors">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-praxeiaGold/10 text-praxeiaGold flex items-center justify-center text-xl mb-4">
+            <div class="w-12 h-12 rounded-xl bg-praxeiaTurquoise/10 text-praxeiaTurquoise flex items-center justify-center text-xl mb-4">
               <i class="fa-solid fa-chart-pie"></i>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Kit de Acompañamiento a Trayectorias</h3>
+            <h3 class="text-xl font-bold text-iceGray mb-2">Kit de Acompañamiento a Trayectorias</h3>
             <p class="text-xs text-gray-300 mb-6 leading-relaxed">Matrices automatizadas en Excel/Google Sheets para Sistemas de Alerta Temprana (SAT), Bitácoras de Preceptoría e Informes Cualitativos.</p>
           </div>
           <div>
-            <div class="text-2xl font-bold text-white mb-4">$18.000 <span class="text-xs font-normal text-gray-400">ARS</span></div>
+            <div class="text-2xl font-bold text-iceGray mb-4">$18.000 <span class="text-xs font-normal text-gray-400">ARS</span></div>
             <a href="https://mpago.la/TU_LINK_AQUI" target="_blank" class="w-full py-3 rounded-xl bg-mpBlue hover:bg-mpBlueHover text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
               <i class="fa-solid fa-credit-card"></i>
               <span>Comprar con Mercado Pago</span>
@@ -206,16 +241,16 @@
           </div>
         </div>
 
-        <div class="bg-bgDark p-6 rounded-2xl border border-borderDark flex flex-col justify-between hover:border-praxeiaGold/50 transition-colors">
+        <div class="bg-bgDark p-6 rounded-2xl border border-borderDark flex flex-col justify-between hover:border-praxeiaTurquoise/50 transition-colors">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-praxeiaGold/10 text-praxeiaGold flex items-center justify-center text-xl mb-4">
+            <div class="w-12 h-12 rounded-xl bg-praxeiaTurquoise/10 text-praxeiaTurquoise flex items-center justify-center text-xl mb-4">
               <i class="fa-solid fa-boxes-packing"></i>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Kit Integral Praxeia (Full Pack)</h3>
+            <h3 class="text-xl font-bold text-iceGray mb-2">Kit Integral Praxeia (Full Pack)</h3>
             <p class="text-xs text-gray-300 mb-6 leading-relaxed">Acceso completo a todos los kits de redacción, organización de plazos, checklists de legajos y tableros de control de procesos.</p>
           </div>
           <div>
-            <div class="text-2xl font-bold text-white mb-4">$28.000 <span class="text-xs font-normal text-gray-400">ARS</span></div>
+            <div class="text-2xl font-bold text-iceGray mb-4">$28.000 <span class="text-xs font-normal text-gray-400">ARS</span></div>
             <a href="https://mpago.la/TU_LINK_AQUI" target="_blank" class="w-full py-3 rounded-xl bg-mpBlue hover:bg-mpBlueHover text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
               <i class="fa-solid fa-credit-card"></i>
               <span>Comprar Pack Completo</span>
@@ -227,39 +262,39 @@
     </div>
   </section>
 
-  <!-- FORMULARIO DE SUSCRIPCIÓN GRATUITA Y PARTICIPACIÓN -->
+  <!-- FORMULARIO DE SUSCRIPCIÓN Y COMUNIDAD -->
   <section id="suscripcion" class="py-20 max-w-4xl mx-auto px-4">
     <div class="bg-cardDark p-8 sm:p-12 rounded-3xl border border-borderDark shadow-2xl relative overflow-hidden">
       <div class="text-center max-w-xl mx-auto mb-8 relative z-10">
-        <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-semibold uppercase tracking-wider inline-block mb-3">Acceso Libre y Gratuito</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Suscripción a la Red de Escuelas</h2>
-        <p class="text-sm text-gray-300">Suscríbase sin costo para recibir la edición digital completa del Anuario, novedades sobre la oferta académica y recursos pedagógicos mensuales.</p>
+        <span class="px-3 py-1 bg-praxeiaTurquoise/10 text-praxeiaTurquoise rounded-full text-xs font-semibold uppercase tracking-wider inline-block mb-3">Comunidad Praxeia</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-iceGray mb-3">Suscripción e Integración</h2>
+        <p class="text-sm text-gray-300">Forme parte de nuestra red para recibir la edición digital del Anuario, novedades sobre la oferta académica y recursos pedagógicos mensuales.</p>
       </div>
 
-      <form class="space-y-4 relative z-10" onsubmit="event.preventDefault(); alert('¡Suscripción exitosa! Bienvenido/a a la Red Praxeia.');">
+      <form class="space-y-4 relative z-10" onsubmit="event.preventDefault(); alert('¡Suscripción exitosa! Bienvenido/a a la Comunidad Praxeia.');">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Nombre y Apellido</label>
-            <input type="text" required class="w-full px-4 py-3 rounded-xl bg-bgDark border border-borderDark text-white focus:outline-none focus:border-praxeiaGold text-sm" placeholder="Ej. Prof. Juan Pérez">
+            <input type="text" required class="w-full px-4 py-3 rounded-xl bg-bgDark border border-borderDark text-iceGray focus:outline-none focus:border-praxeiaTurquoise text-sm" placeholder="Ej. Prof. Juan Pérez">
           </div>
           <div>
             <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Correo Electrónico</label>
-            <input type="email" required class="w-full px-4 py-3 rounded-xl bg-bgDark border border-borderDark text-white focus:outline-none focus:border-praxeiaGold text-sm" placeholder="correo@ejemplo.com">
+            <input type="email" required class="w-full px-4 py-3 rounded-xl bg-bgDark border border-borderDark text-iceGray focus:outline-none focus:border-praxeiaTurquoise text-sm" placeholder="correo@ejemplo.com">
           </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Institución / Organización</label>
-            <input type="text" class="w-full px-4 py-3 rounded-xl bg-bgDark border border-borderDark text-white focus:outline-none focus:border-praxeiaGold text-sm" placeholder="Nombre de la institución">
+            <input type="text" class="w-full px-4 py-3 rounded-xl bg-bgDark border border-borderDark text-iceGray focus:outline-none focus:border-praxeiaTurquoise text-sm" placeholder="Nombre de la institución">
           </div>
           <div>
             <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Rol u Ocupación</label>
-            <input type="text" class="w-full px-4 py-3 rounded-xl bg-bgDark border border-borderDark text-white focus:outline-none focus:border-praxeiaGold text-sm" placeholder="Ej. Preceptor / Directivo / Docente">
+            <input type="text" class="w-full px-4 py-3 rounded-xl bg-bgDark border border-borderDark text-iceGray focus:outline-none focus:border-praxeiaTurquoise text-sm" placeholder="Ej. Preceptor / Directivo / Docente">
           </div>
         </div>
 
         <div class="pt-2">
-          <button type="submit" class="w-full py-4 rounded-xl bg-praxeiaGold text-bgDark font-bold hover:bg-yellow-400 transition-colors shadow-lg shadow-praxeiaGold/10 flex items-center justify-center gap-2">
+          <button type="submit" class="w-full py-4 rounded-xl bg-aeroBlue text-bgDark font-bold hover:bg-aeroBlueHover hover:text-white transition-colors shadow-lg shadow-aeroBlue/10 flex items-center justify-center gap-2">
             <i class="fa-solid fa-paper-plane"></i>
             <span>Suscribirme Gratuitamente</span>
           </button>
@@ -271,7 +306,7 @@
   <!-- FOOTER -->
   <footer class="py-8 border-t border-borderDark text-center text-xs text-gray-400">
     <div class="max-w-7xl mx-auto px-4">
-      <p class="mb-2 font-bold text-gray-300">PRAXEIA · Consultora y Centro de Estudios e Investigaciones Pedagógicas</p>
+      <p class="mb-2 font-bold text-iceGray">PRAXEIA · Consultora y Centro de Estudios e Investigaciones Pedagógicas</p>
       <p>Deán Funes, Córdoba, Argentina · Contacto: praxeiaccei@gmail.com</p>
     </div>
   </footer>
