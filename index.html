@@ -64,6 +64,49 @@
       <!-- MENÚ PRINCIPAL -->
       <div class="hidden md:flex items-center gap-6 text-sm font-medium text-iceGray">
         <a href="#inicio" class="hover:text-praxeiaTurquoise transition-colors">Inicio</a>
+        <!-- DESPLEGABLE: INICIO E INSTITUCIONAL -->
+        <div class="relative group">
+          <button class="flex items-center gap-1.5 hover:text-praxeiaTurquoise transition-colors py-2">
+            <span>Inicio</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div class="absolute top-full left-0 hidden group-hover:block w-56 bg-cardDark border border-borderDark rounded-xl shadow-2xl p-2 space-y-1">
+            <a href="#inicio" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+              <i class="fa-solid fa-house mr-2 text-praxeiaTurquoise"></i>Presentación
+            </a>
+            <a href="#origen" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+              <i class="fa-solid fa-compass mr-2 text-praxeiaTurquoise"></i>Origen y Sentido
+            </a>
+            <a href="#mision" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+              <i class="fa-solid fa-bullseye mr-2 text-praxeiaTurquoise"></i>Misión
+            </a>
+            <a href="#vision" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+              <i class="fa-solid fa-eye mr-2 text-praxeiaTurquoise"></i>Visión
+            </a>
+
+            <!-- SUBMENÚ: EQUIPO PRAXEIA (Desplegable en cascada) -->
+            <div class="relative group/sub pt-1 border-t border-borderDark mt-1">
+              <div class="px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors flex items-center justify-between cursor-pointer text-iceGray">
+                <span><i class="fa-solid fa-users mr-2 text-praxeiaTurquoise"></i>Equipo Praxeia</span>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+              </div>
+              
+              <!-- Menú secundario flotante hacia la derecha -->
+              <div class="absolute top-0 left-full hidden group-hover/sub:block w-52 bg-cardDark border border-borderDark rounded-xl shadow-2xl p-2 space-y-1 ml-1">
+                <a href="#direccion-general" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+                  <i class="fa-solid fa-user-tie mr-2 text-praxeiaTurquoise"></i>Dirección General
+                </a>
+                <a href="#direccion-editorial" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+                  <i class="fa-solid fa-book-open-reader mr-2 text-praxeiaTurquoise"></i>Dirección Editorial
+                </a>
+                <a href="#direccion-academica" class="block px-4 py-2 text-xs rounded-lg hover:bg-bgDark hover:text-praxeiaTurquoise transition-colors">
+                  <i class="fa-solid fa-graduation-cap mr-2 text-praxeiaTurquoise"></i>Dirección Académica
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
         <a href="#convocatorias" class="hover:text-praxeiaTurquoise transition-colors">Convocatorias</a>
         <a href="#publicaciones" class="hover:text-praxeiaTurquoise transition-colors">Publicaciones</a>
         
