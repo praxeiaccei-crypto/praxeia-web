@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEXO — Revista Semestral de debate académico y divulgación | PRAXEIA</title>
+  
+  <!-- FAVICON -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23E2E8F0'/><text x='50%' y='72%' font-family='Georgia, serif' font-size='70' font-weight='bold' fill='%231e2530' text-anchor='middle'>T</text></svg>">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgDark: '#1e2530',        /* Gris Oscuro Principal */
+            cardDark: '#283141',      /* Gris Oscuro Secundario */
+            borderDark: '#3b4759',    /* Bordes */
+            iceGray: '#E2E8F0',       /* Gris Hielo para Textos */
+            aeroBlue: '#38bdf8',      /* Celeste Aero para Botones */
+            aeroBlueHover: '#0284c7', /* Celeste Aero Hover */
+            praxeiaTurquoise: '#2dd4bf' /* Turquesa para Resaltados */
+          },
+          fontFamily: {
+            sans: ['Georgia', 'serif'],
+            serif: ['Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #1e2530;
+      color: #E2E8F0;
+    }
+  </style>
+</head>
+<body class="bg-bgDark text-iceGray antialiased selection:bg-praxeiaTurquoise selection:text-black">
+
+  <!-- BARRA DE NAVEGACIÓN DE LA SUBPÁGINA -->
+  <nav class="fixed top-0 left-0 w-full z-40 bg-bgDark/95 backdrop-blur-md border-b border-borderDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+      
+      <!-- LOGO Y VÍNCULO A INICIO -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-xl bg-iceGray flex items-center justify-center text-bgDark font-bold text-2xl shadow-md group-hover:bg-praxeiaTurquoise transition-colors">
+          P
+        </div>
+        <div>
+          <span class="text-2xl tracking-wider text-iceGray font-bold block leading-none mb-1">PRAXEIA</span>
+          <span class="text-[9px] text-gray-300 tracking-widest uppercase block leading-tight">Centro de Estudios e Investigaciones</span>
+        </div>
+      </a>
+
+      <!-- ENLACES DE NAVEGACIÓN INTERNA -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-iceGray">
+        <a href="#presentacion" class="hover:text-praxeiaTurquoise transition-colors">Presentación</a>
+        <a href="#secciones" class="hover:text-praxeiaTurquoise transition-colors">Secciones</a>
+        <a href="#equipo" class="hover:text-praxeiaTurquoise transition-colors">Equipo Editorial</a>
+        <a href="#autores" class="hover:text-praxeiaTurquoise transition-colors">Guía para Autores</a>
+        <a href="#politicas" class="hover:text-praxeiaTurquoise transition-colors">Políticas</a>
+      </div>
+
+      <!-- BOTÓN VOLVER AL SITIO PRINCIPAL -->
+      <a href="index.html" class="px-4 py-2 rounded-xl bg-cardDark border border-borderDark text-iceGray hover:bg-borderDark transition-all duration-300 text-xs sm:text-sm font-bold flex items-center gap-2">
+        <i class="fa-solid fa-arrow-left text-praxeiaTurquoise"></i>
+        <span>Volver a Praxeia</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION / ENCABEZADO DE LA REVISTA -->
+  <section class="pt-40 pb-16 relative overflow-hidden border-b border-borderDark">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-praxeiaTurquoise/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cardDark border border-borderDark text-praxeiaTurquoise text-xs font-semibold uppercase tracking-widest mb-6">
+        <i class="fa-solid fa-book-bookmark"></i>
+        Publicación Científico-Pedagógica · ISSN en trámite
+      </div>
+      
+      <h1 class="text-4xl sm:text-6xl font-bold text-iceGray tracking-tight leading-none mb-4">
+        TEXO
+      </h1>
+      <p class="text-lg sm:text-2xl text-praxeiaTurquoise font-semibold mb-6">
+        Revista Semestral de debate académico y divulgación
+      </p>
+      <p class="text-sm sm:text-base text-gray-300 max-w-3xl mx-auto italic leading-relaxed mb-8">
+        Sello Editorial Praxeia — Centro de Estudios e Investigaciones Pedagógicas<br>Deán Funes, Córdoba, Argentina
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4 text-xs text-gray-300">
+        <span class="px-3 py-1.5 bg-cardDark rounded-lg border border-borderDark"><i class="fa-regular fa-calendar-check mr-2 text-praxeiaTurquoise"></i>Periodicidad: Semestral</span>
+        <span class="px-3 py-1.5 bg-cardDark rounded-lg border border-borderDark"><i class="fa-solid fa-language mr-2 text-praxeiaTurquoise"></i>Idiomas: Español, Italiano, Inglés</span>
+        <span class="px-3 py-1.5 bg-cardDark rounded-lg border border-borderDark"><i class="fa-solid fa-lock-open mr-2 text-praxeiaTurquoise"></i>Acceso Abierto (Open Access)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 1: PRESENTACIÓN Y DOSSIER N° 0 -->
+  <section id="presentacion" class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-cardDark p-8 rounded-2xl border border-borderDark mb-8">
+      <span class="text-xs font-bold uppercase tracking-wider text-praxeiaTurquoise">Número Inaugural (N° 0) — 2026</span>
+      <h2 class="text-2xl font-bold text-iceGray mt-1 mb-4">Presentación y Sentido Editorial</h2>
+      
+      <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">
+        La complejidad que atraviesa a las instituciones educativas contemporáneas interpela de manera directa los formatos tradicionales de transmisión y enseñanza. En este escenario, emerge con fuerza un hacer pedagógico que excede los límites físicos y normativos del aula convencional: un ejercicio profesional que se articula en talleres, dispositivos de intervención institucional, espacios comunitarios y redes de acompañamiento.
+      </p>
+      <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-6">
+        El propósito central de <strong>TEXO</strong> radica en visibilizar, conceptualizar y jerarquizar las prácticas de aquellos educadores y formadores que operan en los márgenes de la gramática escolar tradicional, construyendo saberes prácticos situados que merecen circulación académica y debate riguroso.
+      </p>
+
+      <!-- DOSSIER TEMÁTICO -->
+      <div class="bg-bgDark p-6 rounded-xl border border-borderDark">
+        <h3 class="text-base font-bold text-praxeiaTurquoise mb-2">
+          Dossier Temático: "El oficio de formar sin aulas. Talleres y dispositivos alternativos en acción"
+        </h3>
+        <p class="text-xs text-gray-300 mb-4">Ejes principales de indagación:</p>
+        <ul class="space-y-3 text-xs text-gray-300">
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-angle-right text-praxeiaTurquoise mt-0.5"></i>
+            <span><strong>Eje 1: Lo que inventamos para enseñar.</strong> Sistematización de talleres, ateneos y dispositivos didácticos alternativos implementados en IFD u otros espacios de formación.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-angle-right text-praxeiaTurquoise mt-0.5"></i>
+            <span><strong>Eje 2: Lo que inventamos para acompañar.</strong> Tutorías, consultorías institucionales y abordajes pedagógicos para la retención escolar y el seguimiento de trayectorias.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-angle-right text-praxeiaTurquoise mt-0.5"></i>
+            <span><strong>Eje 3: Lo que inventamos para sostenernos.</strong> Cuidado del formador, estrategias frente al desgaste profesional y redes colaborativas entre educadores.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: SECCIONES ABIERTAS -->
+  <section id="secciones" class="py-16 bg-cardDark/40 border-y border-borderDark">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-iceGray mb-2">Secciones de la Revista</h2>
+        <p class="text-xs text-gray-300">Tipologías de contribuciones abiertas a la convocatoria</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="bg-bgDark p-6 rounded-2xl border border-borderDark">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-praxeiaTurquoise px-2 py-0.5 bg-praxeiaTurquoise/10 rounded">Sección 1 · Arbitrada</span>
+          <h3 class="text-lg font-bold text-iceGray mt-2 mb-2">Artículos Académicos</h3>
+          <p class="text-xs text-gray-300 leading-relaxed mb-3">Trabajos de investigación o ensayos teóricos con rigor metodológico y marco conceptual formal. Sometidos a proceso de referato ciego por pares externos (double-blind peer review).</p>
+          <span class="text-xs font-semibold text-gray-400"><i class="fa-regular fa-file-lines mr-1"></i> Extensión: 3.000 a 5.000 palabras.</span>
+        </div>
+
+        <div class="bg-bgDark p-6 rounded-2xl border border-borderDark">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-praxeiaTurquoise px-2 py-0.5 bg-praxeiaTurquoise/10 rounded">Sección 2 · Divulgación</span>
+          <h3 class="text-lg font-bold text-iceGray mt-2 mb-2">Experiencias en Territorio</h3>
+          <p class="text-xs text-gray-300 leading-relaxed mb-3">Relatos de intervención pedagógica y sistematización de experiencias en primera persona (problema, intervención, resultados y aprendizajes).</p>
+          <span class="text-xs font-semibold text-gray-400"><i class="fa-regular fa-file-lines mr-1"></i> Extensión: 1.500 a 2.500 palabras.</span>
+        </div>
+
+        <div class="bg-bgDark p-6 rounded-2xl border border-borderDark">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-praxeiaTurquoise px-2 py-0.5 bg-praxeiaTurquoise/10 rounded">Sección 3 · Recursos</span>
+          <h3 class="text-lg font-bold text-iceGray mt-2 mb-2">Taller para Llevar (Fichas Prácticas)</h3>
+          <p class="text-xs text-gray-300 leading-relaxed mb-3">Diseños metodológicos y dispositivos de taller listos para su réplica o adaptación institucional (fundamentación, objetivos, secuencia de momentos y mediaciones).</p>
+          <span class="text-xs font-semibold text-gray-400"><i class="fa-regular fa-file-lines mr-1"></i> Extensión: Hasta 1 carilla.</span>
+        </div>
+
+        <div class="bg-bgDark p-6 rounded-2xl border border-borderDark">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-praxeiaTurquoise px-2 py-0.5 bg-praxeiaTurquoise/10 rounded">Secciones 4 y 5 · Breves</span>
+          <h3 class="text-lg font-bold text-iceGray mt-2 mb-2">Notas Breves y Reseñas</h3>
+          <p class="text-xs text-gray-300 leading-relaxed mb-3"><strong>Voz del Lector:</strong> Micro-ensayos y reflexiones conceptuales breves (hasta 300 palabras).<br><strong>Reseña a Conciencia:</strong> Lecturas críticas de publicaciones o recursos recientes (hasta 800 palabras).</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: EQUIPO EDITORIAL -->
+  <section id="equipo" class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-3xl font-bold text-iceGray mb-2">Equipo Editorial</h2>
+      <p class="text-xs text-gray-300">Estructura de gestión y arbitraje de la revista</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      
+      <div class="bg-cardDark p-6 rounded-2xl border border-borderDark text-center">
+        <div class="w-12 h-12 rounded-full bg-praxeiaTurquoise/10 text-praxeiaTurquoise flex items-center justify-center text-xl mx-auto mb-3">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <h3 class="text-base font-bold text-iceGray">Eugenia</h3>
+        <p class="text-xs text-praxeiaTurquoise mt-1">Dirección General</p>
+      </div>
+
+      <div class="bg-cardDark p-6 rounded-2xl border border-borderDark text-center">
+        <div class="w-12 h-12 rounded-full bg-praxeiaTurquoise/10 text-praxeiaTurquoise flex items-center justify-center text-xl mx-auto mb-3">
+          <i class="fa-solid fa-book-open-reader"></i>
+        </div>
+        <h3 class="text-base font-bold text-iceGray">Paula</h3>
+        <p class="text-xs text-praxeiaTurquoise mt-1">Edición y Curaduría de Contenidos</p>
+      </div>
+
+      <div class="bg-cardDark p-6 rounded-2xl border border-borderDark text-center">
+        <div class="w-12 h-12 rounded-full bg-praxeiaTurquoise/10 text-praxeiaTurquoise flex items-center justify-center text-xl mx-auto mb-3">
+          <i class="fa-solid fa-pen-nib"></i>
+        </div>
+        <h3 class="text-base font-bold text-iceGray">Antonella</h3>
+        <p class="text-xs text-praxeiaTurquoise mt-1">Diseño y Maquetación</p>
+      </div>
+
+    </div>
+
+    <div class="bg-cardDark p-6 rounded-2xl border border-borderDark text-center">
+      <h4 class="text-sm font-bold text-iceGray mb-1"><i class="fa-solid fa-users-viewfinder mr-2 text-praxeiaTurquoise"></i>Comité Evaluador / Revisores</h4>
+      <p class="text-xs text-gray-300">Evaluadores externos independientes para el arbitraje anónimo por pares (*double-blind peer review*) de los Artículos Académicos.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: GUÍA PARA AUTORES Y FORMULARIO -->
+  <section id="autores" class="py-16 bg-cardDark/40 border-y border-borderDark">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-3xl font-bold text-iceGray mb-2">Directrices para Autores</h2>
+        <p class="text-xs text-gray-300">Requisitos normativos y presentación de manuscritos</p>
+      </div>
+
+      <div class="bg-bgDark p-8 rounded-2xl border border-borderDark mb-10 space-y-4 text-xs sm:text-sm text-gray-300">
+        <div>
+          <h4 class="font-bold text-iceGray text-sm mb-1 text-praxeiaTurquoise">1. Idiomas de Publicación y Metadatos</h4>
+          <p>Se reciben manuscritos en <strong>español, italiano e inglés</strong>. Independientemente del idioma de redacción del cuerpo del texto, todos los trabajos deberán incluir de forma obligatoria Título, Resumen (150 palabras) y Palabras clave (3 a 5 términos) en <strong>español y en inglés</strong>.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-iceGray text-sm mb-1 text-praxeiaTurquoise">2. Formato y Normas APA (7.ª edición)</h4>
+          <p>Archivo editable (.doc / .docx), tipografía Times New Roman o Arial 12, interlineado 1,5. Todas las citas en texto y lista bibliográfica final deben ajustarse estrictamente a normas APA 7.ª ed.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-iceGray text-sm mb-1 text-praxeiaTurquoise">3. Anonimización para Referato Ciego</h4>
+          <p>Para la sección de Artículos Académicos, el archivo adjunto no deberá incluir nombres, filiaciones ni marcas de agua dentro del documento para garantizar la evaluación anónima.</p>
+        </div>
+      </div>
+
+      <!-- BOTÓN AL FORMULARIO (ABRE EN NUEVA PESTAÑA) -->
+      <div class="text-center bg-cardDark p-8 rounded-2xl border border-borderDark">
+        <h3 class="text-xl font-bold text-iceGray mb-2">¿Quieres postular tu trabajo para TEXO N° 0?</h3>
+        <p class="text-xs text-gray-300 mb-6">Accede al formulario oficial de recepción de manuscritos.</p>
+        <a href="https://docs.google.com/forms/d/14MPe1himlv_yDPPYBjrCQizFZGpJDdRrnEa7CRrzUM0/edit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-aeroBlue text-bgDark font-bold hover:bg-aeroBlueHover hover:text-white transition-all duration-300 shadow-lg text-sm sm:text-base">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Enviar Manuscrito a través del Formulario</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: POLÍTICAS EDITORIALES -->
+  <section id="politicas" class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-gray-300 space-y-4">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold text-iceGray">Políticas Editoriales y Ética</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-cardDark p-6 rounded-xl border border-borderDark">
+        <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">Política de Acceso Abierto</h4>
+        <p>TEXO provee acceso abierto e inmediato a todo su contenido, bajo el principio de que hacer disponible libremente la investigación al público fomenta un mayor intercambio del conocimiento pedagógico global.</p>
+      </div>
+      <div class="bg-cardDark p-6 rounded-xl border border-borderDark">
+        <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">Declaración de Ética (COPE)</h4>
+        <p>La revista se compromete con los estándares éticos de publicación fijados por el Committee on Publication Ethics (COPE), velando por la originalidad de los aportes y la transparencia en las evaluaciones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 border-t border-borderDark text-center text-xs text-gray-400">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="mb-2 font-bold text-iceGray">TEXO · Revista Semestral de debate académico y divulgación</p>
+      <p>Sello Editorial Praxeia · Deán Funes, Córdoba, Argentina · Contacto: praxeiaccei@gmail.com</p>
+    </div>
+  </footer>
+
+</body>
+</html>
