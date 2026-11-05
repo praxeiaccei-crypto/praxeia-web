@@ -46,14 +46,14 @@
   <nav class="fixed top-0 left-0 w-full z-40 bg-bgDark/95 backdrop-blur-md border-b border-borderDark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
       
-      <!-- LOGO Y VÍNCULO A INICIO -->
+      <!-- LOGO Y VÍNCULO A INICIO (ESTILO ACTUALIZADO SEGÚN IMAGEN) -->
       <a href="index.html" class="flex items-center gap-3 group">
         <div class="w-12 h-12 rounded-xl bg-iceGray flex items-center justify-center text-bgDark font-bold text-2xl shadow-md group-hover:bg-praxeiaTurquoise transition-colors">
           P
         </div>
         <div>
-          <span class="text-2xl tracking-wider text-iceGray font-bold block leading-none mb-1">PRAXEIA</span>
-          <span class="text-[9px] text-gray-300 tracking-widest uppercase block leading-tight">Centro de Estudios e Investigaciones</span>
+          <span class="text-xl tracking-wider text-iceGray font-bold block leading-none mb-1">PRAXEIA</span>
+          <span class="text-[8px] sm:text-[9px] text-gray-300 tracking-widest uppercase block leading-tight font-medium">Consultora y Centro de Estudios e Investigaciones Pedagógicas</span>
         </div>
       </a>
 
@@ -108,12 +108,12 @@
       <span class="text-xs font-bold uppercase tracking-wider text-praxeiaTurquoise">Número Inaugural (N° 0) — 2026</span>
       <h2 class="text-2xl font-bold text-iceGray mt-1 mb-4">Presentación y Sentido Editorial</h2>
       
-      <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">
-> TEXO nace del latín "texere", tejer, entramar, construir en conjunto. Entendemos la pedagogía no como un cuerpo estático de doctrinas, sino como un "tejido vivo en constante movimiento", compuesto por hilos disímiles que se cruzan, se tensionan y cobran sentido en el acto mismo de formar.
-> 
-> En tiempos donde las instituciones y las prácticas educativas se transforman de manera vertiginosa, TEXO se constituye como una "red de visibilización, conceptualización y diálogo". Buscamos albergar y proyectar la polifonía de saberes prácticos y reflexiones teóricas que emergen en las aulas, los talleres, las comunidades y los márgenes de la gramática escolar. 
-> 
-> Como revista académica y de divulgación, nuestro propósito es ofrecer un espacio riguroso pero abierto, un entramado en acción donde las voces de educadores, investigadores y formadores se encuentren para interpelar el presente y proyectar horizontes pedagógicos transformadores.      </p>
+      <blockquote class="border-l-4 border-praxeiaTurquoise pl-4 italic text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 space-y-3">
+        <p>TEXO nace del latín "texere", tejer, entramar, construir en conjunto. Entendemos la pedagogía no como un cuerpo estático de doctrinas, sino como un "tejido vivo en constante movimiento", compuesto por hilos disímiles que se cruzan, se tensionan y cobran sentido en el acto mismo de formar.</p>
+        <p>En tiempos donde las instituciones y las prácticas educativas se transforman de manera vertiginosa, TEXO se constituye como una "red de visibilización, conceptualización y diálogo". Buscamos albergar y proyectar la polifonía de saberes prácticos y reflexiones teóricas que emergen en las aulas, los talleres, las comunidades y los márgenes de la gramática escolar.</p>
+        <p>Como revista académica y de divulgación, nuestro propósito es ofrecer un espacio riguroso pero abierto, un entramado en acción donde las voces de educadores, investigadores y formadores se encuentren para interpelar el presente y proyectar horizontes pedagógicos transformadores.</p>
+      </blockquote>
+
       <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-6">
         El propósito central de <strong>TEXO</strong> radica en visibilizar, conceptualizar y jerarquizar las prácticas de aquellos educadores y formadores que operan en los márgenes de la gramática escolar tradicional, construyendo saberes prácticos situados que merecen circulación académica y debate riguroso.
       </p>
@@ -183,7 +183,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN 3: EQUIPO EDITORIAL -->
+  <!-- SECCIÓN 3: EQUIPO EDITORIAL Y BANCO DE EVALUADORES -->
   <section id="equipo" class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-2xl mx-auto mb-12">
       <h2 class="text-3xl font-bold text-iceGray mb-2">Equipo Editorial</h2>
@@ -218,9 +218,17 @@
 
     </div>
 
-    <div class="bg-cardDark p-6 rounded-2xl border border-borderDark text-center">
-      <h4 class="text-sm font-bold text-iceGray mb-1"><i class="fa-solid fa-users-viewfinder mr-2 text-praxeiaTurquoise"></i>Comité Evaluador / Revisores</h4>
-      <p class="text-xs text-gray-300">Evaluadores externos independientes para el arbitraje anónimo por pares (*double-blind peer review*) de los Artículos Académicos.</p>
+    <!-- COMITÉ EVALUADOR Y BOTÓN AL GFORM DE BANCO DE EVALUADORES -->
+    <div class="bg-cardDark p-8 rounded-2xl border border-borderDark text-center space-y-4">
+      <h4 class="text-base font-bold text-iceGray"><i class="fa-solid fa-users-viewfinder mr-2 text-praxeiaTurquoise"></i>Comité Evaluador / Banco de Revisores</h4>
+      <p class="text-xs text-gray-300 max-w-2xl mx-auto">Evaluadores externos independientes para el arbitraje anónimo por pares (<em>double-blind peer review</em>) de los Artículos Académicos.</p>
+      
+      <div class="pt-2">
+        <a href="https://docs.google.com/forms/d/14MPe1himlv_yDPPYBjrCQizFZGpJDdRrnEa7CRrzUM0/edit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-aeroBlue text-bgDark font-bold hover:bg-aeroBlueHover hover:text-white transition-all duration-300 shadow-md text-xs sm:text-sm">
+          <i class="fa-solid fa-user-plus"></i>
+          <span>Inscribirse al Banco de Evaluadores / Revisores</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -232,73 +240,72 @@
         <p class="text-xs text-gray-300">Requisitos normativos y presentación de manuscritos</p>
       </div>
 
-      <div class="bg-bgDark p-8 rounded-2xl border border-borderDark mb-10 space-y-4 text-xs sm:text-sm text-gray-300">
+      <div class="bg-bgDark p-8 rounded-2xl border border-borderDark mb-10 space-y-6 text-xs sm:text-sm text-gray-300">
+        
+        <!-- 1. IDIOMAS -->
         <div>
-        <!-- FORMATO GENERAL -->
-          <div>
-	<h4 class="font-bold text-iceGray text-sm mb-1 text-praxeiaTurquoise">1. Idiomas de Publicación y Metadatos</h4>
+          <h4 class="font-bold text-iceGray text-sm mb-1 text-praxeiaTurquoise">1. Idiomas de Publicación y Metadatos</h4>
           <p>Se reciben manuscritos en <strong>español, italiano e inglés</strong>. Independientemente del idioma de redacción del cuerpo del texto, todos los trabajos deberán incluir de forma obligatoria Título, Resumen (150 palabras) y Palabras clave (3 a 5 términos) en <strong>español y en inglés</strong>.</p>
         </div>
+
+        <!-- 2. FORMATO GENERAL -->
         <div>
-
-            <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">2. Formato General del Manuscrito</h4>
-            <ul class="list-disc pl-5 space-y-1 text-xs">
-              <li><strong>Procesador de texto:</strong> Archivo editable (.doc o .docx).</li>
-              <li><strong>Tipografía e interlineado:</strong> Times New Roman o Arial, cuerpo 12, interlineado 1,5 líneas.</li>
-              <li><strong>Márgenes y paginación:</strong> Estándar (2,5 cm), paginado en el margen inferior derecho.</li>
-            </ul>
-          </div>
-
-          <!-- ESTRUCTURA Y ENVÍO -->
-          <div>
-            <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">3. Estructura de la Presentación y Envío</h4>
-            <p class="text-xs mb-2">La postulación de aportes se canalizará exclusivamente mediante el formulario digital. El envío requiere:</p>
-            <ol class="list-decimal pl-5 space-y-1 text-xs">
-              <li><strong>Datos en el formulario:</strong> Apellido y nombre, pertenencia institucional, máximo grado académico alcanzado y correo electrónico.</li>
-              <li><strong>Archivo adjunto (.doc / .docx):</strong> Incluir en la primera página el Título del trabajo (español/inglés), Resumen/Abstract (hasta 150 palabras) y Palabras clave/Keywords (3 a 5 términos).</li>
-            </ol>
-          </div>
-
-          <!-- EVALUACIÓN Y ANONIMIZACIÓN -->
-          <div>
-            <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">4. Originalidad, Evaluación y Anonimización</h4>
-            <ul class="list-disc pl-5 space-y-1 text-xs">
-              <li><strong>Originalidad:</strong> Los trabajos deben ser inéditos y de autoría propia de quienes firman la propuesta.</li>
-              <li><strong>Referato Ciego (Artículos Académicos):</strong> Para garantizar el arbitraje anónimo, el archivo adjunto (.doc / .docx) <strong>no deberá incluir nombres ni filiaciones</strong> dentro del cuerpo del texto, encabezados, pies de página o propiedades del documento. Los datos de autoría irán únicamente en el Formulario.</li>
-              <li><strong>Acompañamiento Editorial:</strong> Las secciones de Experiencias en Territorio, Talleres, Notas y Reseñas contarán con un proceso de lectura atenta y acompañamiento constructivo por parte del equipo editor.</li>
-            </ul>
-          </div>
-
-          <!-- CITAS APA 7 -->
-          <div>
-            <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">5. Citas y Referencias Bibliográficas (Normas APA, 7.ª edición)</h4>
-            <p class="text-xs mb-2">Todas las citas en el cuerpo del texto y la lista final deberán ajustarse estrictamente a APA 7.ª ed.:</p>
-            <div class="bg-cardDark p-4 rounded-lg space-y-2 text-xs font-mono">
-              <p><strong>Cita narrativa:</strong> Según Picco (2026), la Trama Didáctica opera como un dispositivo...</p>
-              <p><strong>Cita parentética:</strong> El diseño de la enseñanza exige anticipar las barreras de accesibilidad (Picco, 2026).</p>
-              <p><strong>Referencia libro:</strong> Picco, M. E. (2026). <em>Enseñar en el borde: De las representaciones sociales al diseño de la Trama Didáctica</em>. Ed. Praxeia.</p>
-              <p><strong>Referencia artículo:</strong> Skliar, C. (2019). Pedagogías de las diferencias y el estar juntos en la escuela. <em>Revista Interamericana de Educación</em>, 42(1), 15–28.</p>
-            </div>
-          </div>
-
-          <!-- TABLAS E IMÁGENES -->
-          <div>
-            <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">6. Tablas, Gráficos e Imágenes</h4>
-            <ul class="list-disc pl-5 space-y-1 text-xs">
-              <li><strong>Tablas:</strong> Creadas con la herramienta de tablas de Word (no pegadas como imagen), con numeración correlativa, título y fuente al pie.</li>
-              <li><strong>Imágenes y Fotografía:</strong> Insertadas en el texto (Figura 1, Figura 2), resolución mínima de 300 dpi y con las autorizaciones correspondientes para el uso de imágenes de personas/menores.</li>
-            </ul>
-          </div>
-
-          <!-- NOTAS AL PIE -->
-          <div>
-            <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">7. Uso de Notas al Pie de Página</h4>
-            <p class="text-xs">Uso restrictivo y exclusivamente aclaratorio. <strong>No se deben colocar referencias bibliográficas completas como notas al pie</strong> (utilizar el formato parentético APA en el cuerpo del texto).</p>
-          </div>
-
+          <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">2. Formato General del Manuscrito</h4>
+          <ul class="list-disc pl-5 space-y-1 text-xs">
+            <li><strong>Procesador de texto:</strong> Archivo editable (.doc o .docx).</li>
+            <li><strong>Tipografía e interlineado:</strong> Times New Roman o Arial, cuerpo 12, interlineado 1,5 líneas.</li>
+            <li><strong>Márgenes y paginación:</strong> Estándar (2,5 cm), paginado en el margen inferior derecho.</li>
+          </ul>
         </div>
-      </div>
 
+        <!-- 3. ESTRUCTURA Y ENVÍO -->
+        <div>
+          <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">3. Estructura de la Presentación y Envío</h4>
+          <p class="text-xs mb-2">La postulación de aportes se canalizará exclusivamente mediante el formulario digital. El envío requiere:</p>
+          <ol class="list-decimal pl-5 space-y-1 text-xs">
+            <li><strong>Datos en el formulario:</strong> Apellido y nombre, pertenencia institucional, máximo grado académico alcanzado y correo electrónico.</li>
+            <li><strong>Archivo adjunto (.doc / .docx):</strong> Incluir en la primera página el Título del trabajo (español/inglés), Resumen/Abstract (hasta 150 palabras) y Palabras clave/Keywords (3 a 5 términos).</li>
+          </ol>
+        </div>
+
+        <!-- 4. EVALUACIÓN Y ANONIMIZACIÓN -->
+        <div>
+          <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">4. Originalidad, Evaluación y Anonimización</h4>
+          <ul class="list-disc pl-5 space-y-1 text-xs">
+            <li><strong>Originalidad:</strong> Los trabajos deben ser inéditos y de autoría propia de quienes firman la propuesta.</li>
+            <li><strong>Referato Ciego (Artículos Académicos):</strong> Para garantizar el arbitraje anónimo, el archivo adjunto (.doc / .docx) <strong>no deberá incluir nombres ni filiaciones</strong> dentro del cuerpo del texto, encabezados, pies de página o propiedades del documento. Los datos de autoría irán únicamente en el Formulario.</li>
+            <li><strong>Acompañamiento Editorial:</strong> Las secciones de Experiencias en Territorio, Talleres, Notas y Reseñas contarán con un proceso de lectura atenta y acompañamiento constructivo por parte del equipo editor.</li>
+          </ul>
+        </div>
+
+        <!-- 5. CITAS APA 7 -->
+        <div>
+          <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">5. Citas y Referencias Bibliográficas (Normas APA, 7.ª edición)</h4>
+          <p class="text-xs mb-2">Todas las citas en el cuerpo del texto y la lista final deberán ajustarse estrictamente a APA 7.ª ed.:</p>
+          <div class="bg-cardDark p-4 rounded-lg space-y-2 text-xs font-mono">
+            <p><strong>Cita narrativa:</strong> Según Picco (2026), la Trama Didáctica opera como un dispositivo...</p>
+            <p><strong>Cita parentética:</strong> El diseño de la enseñanza exige anticipar las barreras de accesibilidad (Picco, 2026).</p>
+            <p><strong>Referencia libro:</strong> Picco, M. E. (2026). <em>Enseñar en el borde: De las representaciones sociales al diseño de la Trama Didáctica</em>. Ed. Praxeia.</p>
+            <p><strong>Referencia artículo:</strong> Skliar, C. (2019). Pedagogías de las diferencias y el estar juntos en la escuela. <em>Revista Interamericana de Educación</em>, 42(1), 15–28.</p>
+          </div>
+        </div>
+
+        <!-- 6. TABLAS E IMÁGENES -->
+        <div>
+          <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">6. Tablas, Gráficos e Imágenes</h4>
+          <ul class="list-disc pl-5 space-y-1 text-xs">
+            <li><strong>Tablas:</strong> Creadas con la herramienta de tablas de Word (no pegadas como imagen), con numeración correlativa, título y fuente al pie.</li>
+            <li><strong>Imágenes y Fotografía:</strong> Insertadas en el texto (Figura 1, Figura 2), resolución mínima de 300 dpi y con las autorizaciones correspondientes para el uso de imágenes de personas/menores.</li>
+          </ul>
+        </div>
+
+        <!-- 7. NOTAS AL PIE -->
+        <div>
+          <h4 class="font-bold text-iceGray text-sm mb-2 text-praxeiaTurquoise">7. Uso de Notas al Pie de Página</h4>
+          <p class="text-xs">Uso restrictivo y exclusivamente aclaratorio. <strong>No se deben colocar referencias bibliográficas completas como notas al pie</strong> (utilizar el formato parentético APA en el cuerpo del texto).</p>
+        </div>
+
+      </div>
 
       <!-- BOTÓN AL FORMULARIO (ABRE EN NUEVA PESTAÑA) -->
       <div class="text-center bg-cardDark p-8 rounded-2xl border border-borderDark">
